@@ -22,6 +22,7 @@ jobs:
           conda init bash
           source $CONDA/bin/activate myenv
           conda install -c conda-forge pocl
+          conda install -c conda-forge khronos-opencl-icd-loader
           export PYOPENCL_TEST="portable:pthread"
           pip install pyopencl
           python main.py
