@@ -28,7 +28,7 @@ dw_0_dev = cl_array.to_device(queue, dw_0)
 temp_dev = cl_array.to_device(queue, dw*0 - 1)
 out_dev = cl_array.empty_like(dw_dev)
 
-prg = cl.Program(ctx, SRC).build()
+prg = cl.Program(ctx, SRC).build(options=["-cl-opt-disable"])
 
 prg._pt_kernel_0(
         queue, (1,), (1,), dw_dev.data, dw_0_dev.data, out_dev.data,
