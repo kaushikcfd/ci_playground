@@ -18,7 +18,9 @@ jobs:
 
       - name: "My dummy test"
         run: |
-          export PYOPENCL_TEST="portable:pthread"
+          conda create --name myenv
+          conda activate myenv
           conda install -c conda-forge pocl
-          $CONDA/bin/pip install pyopencl
-          $CONDA/bin/python3 main.py
+          export PYOPENCL_TEST="portable:pthread"
+          pip install pyopencl
+          python main.py
