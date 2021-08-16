@@ -20,9 +20,11 @@ jobs:
         run: |
           conda create --name myenv
           conda init bash
+          source ~/.bashrc
           source $CONDA/bin/activate myenv
           conda install -c conda-forge pocl
-          conda install -c conda-forge khronos-opencl-icd-loader
           export PYOPENCL_TEST="portable:pthread"
+          which python
+          which pip
           pip install pyopencl
           python main.py
