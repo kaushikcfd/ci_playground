@@ -19,6 +19,7 @@ jobs:
       - name: "My dummy test"
         run: |
           conda create --name myenv
+          conda init bash
           conda activate myenv
           conda install -c conda-forge pocl
           export PYOPENCL_TEST="portable:pthread"
