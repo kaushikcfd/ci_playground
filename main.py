@@ -33,7 +33,7 @@ prg = cl.Program(ctx, SRC).build()
 prg._pt_kernel_0(
         queue, (1,), (1,), dw_dev.data, dw_0_dev.data, out_dev.data,
         temp_dev.data)
-
+print("Output =", out_dev)
 np.testing.assert_allclose(out_dev.get(),
                            [0, 8, 16, 24])
 print("Yay passed")
