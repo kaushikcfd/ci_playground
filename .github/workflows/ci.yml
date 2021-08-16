@@ -23,6 +23,7 @@ jobs:
           source ~/.bashrc
           source $CONDA/bin/activate myenv
           conda install -c conda-forge pocl
+          export PATH=$CONDA/bin:$PATH
           export PYOPENCL_TEST="portable:pthread"
           which python
           which pip
