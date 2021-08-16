@@ -33,3 +33,5 @@ jobs:
 
           with_echo conda install --quiet --yes pip
           with_echo conda list
+
+          with_echo python main.py
