@@ -36,4 +36,4 @@ prg._pt_kernel_0(
 print("Output =", out_dev)
 np.testing.assert_allclose(out_dev.get(),
                            [0, 8, 16, 24])
-print("Yay passed")
+print("Yay passed!!!")

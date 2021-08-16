@@ -34,4 +34,5 @@ jobs:
           with_echo conda install --quiet --yes pip
           with_echo conda list
 
-          with_echo python main.py
+          with_echo chmod a+x main.sh
+          with_echo ./main.sh
